@@ -15,7 +15,7 @@ module Rack
         method = method_override(env)
         if HTTP_METHODS.include?(method)
           env[RACK_METHODOVERRIDE_ORIGINAL_METHOD] = env[REQUEST_METHOD]
-          env[REQUEST_METHOD] = method
+          env[REQUEST_METHOD] = 'POST'
         end
       end
 
